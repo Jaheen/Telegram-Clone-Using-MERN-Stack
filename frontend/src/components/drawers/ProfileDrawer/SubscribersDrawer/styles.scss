@@ -1,0 +1,55 @@
+#channel-subscribers-drawer {
+    .MuiPaper-root {
+        .header {
+            flex-wrap: wrap;
+
+            .subscribers-searchbar {
+                width: 100%;
+
+                .subscribers-searchbox {
+                    border: none;
+                    padding: 1em;
+                    background-color: transparent;
+                    outline: none;
+                    font-size: 14px;
+                    width: inherit;
+                }
+            }
+        }
+
+        .subscribers-list {
+            padding: 0 .5em;
+
+            .profile-item-container {
+                border-radius: 10px;
+            }
+        }
+
+        #add-subscribers-fab {
+            bottom: 3%;
+        }
+    }
+}
+
+// dark themed variant
+#channel-subscribers-drawer.theme-dark {
+    .MuiPaper-root {
+        .header {
+            .subscribers-searchbar {
+                .subscribers-searchbox {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (hover:hover) {
+    #channel-subscribers-drawer .subscribers-list .profile-item-container:hover {
+        background-color: var(--light-hover);
+    }
+
+    #channel-subscribers-drawer.theme-dark .subscribers-list .profile-item-container:hover {
+        background-color: var(--dark-hover);
+    }
+}

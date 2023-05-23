@@ -1,0 +1,41 @@
+.alert-dialog {
+    .MuiPaper-root {
+        max-width: 350px !important;
+        padding: 1.5em !important;
+
+        .alert-content {
+            padding: 1em 0;
+
+            .content-text {
+                color: black;
+            }
+        }
+
+        .alert-actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .alert-action {
+                min-width: 100px;
+            }
+        }
+    }
+}
+
+.alert-dialog.theme-dark {
+    .MuiPaper-root {
+        background-color: #212121;
+
+        .alert-title {
+            color: white;
+        }
+
+        .alert-content {
+            .content-text {
+                color: white;
+            }
+        }
+    }
+}

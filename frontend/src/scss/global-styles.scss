@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./popover.scss";
+@import "./menu-item.scss";
+@import "./switch.scss";
+@import "./icon-button.scss";
+@import "./scrollbar.scss";
+@import "./drawer.scss";
+@import "./text-field.scss";
+@import "./fab.scss";
+@import "./button.scss";
+@import "./dialog.scss";
+@import "./checkbox.scss";
+
+:root {
+    --light-hover: #71767a14;
+    --dark-hover: #ababab14;
+    --primary-color-light: #3390ec;
+    --primary-color-dark: #8774e1;
+    --message-highlight-color-light: rgba(121, 165, 64, 0.4);
+    --message-highlight-color-dark: rgba(137, 53, 138, 0.4);
+    --primary-hover-color-light: rgba(51, 144, 236, 0.08);
+    --primary-hover-color-dark: rgba(135, 116, 225, 0.08);
+    --danger-color-light: #df3f40;
+    --danger-color-dark: #ff595a;
+    --danger-hover-color-light: rgba(223, 63, 64, 0.08);
+    --danger-hover-color-dark: rgba(255, 89, 90, 0.08);
+
+    --peer-avatar-default-top: #72d5fd;
+    --peer-avatar-default-bottom: #2a9ef1;
+    --peer-avatar-red-top: #ff845e;
+    --peer-avatar-red-bottom: #d45246;
+    --peer-avatar-orange-top: #febb5b;
+    --peer-avatar-orange-bottom: #f68136;
+    --peer-avatar-violet-top: #b694f9;
+    --peer-avatar-violet-bottom: #6c61df;
+    --peer-avatar-green-top: #9ad164;
+    --peer-avatar-green-bottom: #46ba43;
+    --peer-avatar-cyan-top: #53edd6;
+    --peer-avatar-cyan-bottom: #28c9b7;
+    --peer-avatar-blue-top: #5bcbe3;
+    --peer-avatar-blue-bottom: #359ad4;
+    --peer-avatar-pink-top: #ff8aac;
+    --peer-avatar-pink-bottom: #d95574;
+}
+
+$gradient-backgrounds: linear-gradient(var(--peer-avatar-default-top), var(--peer-avatar-default-bottom)),
+    linear-gradient(var(--peer-avatar-red-top), var(--peer-avatar-red-bottom)),
+    linear-gradient(var(--peer-avatar-orange-top), var(--peer-avatar-orange-bottom)),
+    linear-gradient(var(--peer-avatar-violet-top), var(--peer-avatar-violet-bottom)),
+    linear-gradient(var(--peer-avatar-green-top), var(--peer-avatar-green-bottom)),
+    linear-gradient(var(--peer-avatar-cyan-top), var(--peer-avatar-cyan-bottom)),
+    linear-gradient(var(--peer-avatar-blue-top), var(--peer-avatar-blue-bottom)),
+    linear-gradient(var(--peer-avatar-pink-top), var(--peer-avatar-pink-bottom));
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, -apple-system, apple color emoji, BlinkMacSystemFont, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    user-select: none;
+}
+
+@for $i from 1 through length($gradient-backgrounds) {
+    .gradient-background-#{$i - 1} {
+        background: nth($gradient-backgrounds, $i);
+    }
+}

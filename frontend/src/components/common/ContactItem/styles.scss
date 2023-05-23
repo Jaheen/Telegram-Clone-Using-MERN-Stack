@@ -1,0 +1,44 @@
+.contact-item {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .contact-item__avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-item__details {
+        margin-left: 1em;
+        line-height: 1.5;
+
+        .detail__last-active {
+            color: gray;
+            font-size: 14px;
+        }
+    }
+
+    &:hover {
+        background-color: var(--light-hover);
+    }
+}
+
+.contact-item.theme-dark {
+    .contact-item__details {
+        .detail__name {
+            color: white;
+        }
+
+        .detail__last-active {
+            color: lightgray;
+        }
+    }
+
+    &:hover {
+        background-color: var(--dark-hover);
+    }
+}

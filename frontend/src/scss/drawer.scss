@@ -1,0 +1,124 @@
+// Customization for Mui Drawer
+.MuiDrawer-root {
+    .MuiPaper-root {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: .5em 1em;
+
+            .header__title {
+                flex: 1;
+                margin-left: 1em;
+                font-size: 18px;
+            }
+        }
+
+        .scrollable-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .MuiBackdrop-root {
+        background-color: transparent;
+    }
+}
+
+.MuiDrawer-root.mainbar-drawer {
+    .MuiPaper-root {
+        width: 25%;
+        box-shadow: none;
+        border-left: lightgray 1px solid;
+    }
+}
+
+// dark theme variant for MUI drawer
+.MuiDrawer-root.theme-dark {
+    .MuiPaper-root {
+        background-color: #212121;
+        border-color: #181818;
+
+        .header {
+            .header__title {
+                color: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .MuiDrawer-root.mainbar-drawer {
+        .MuiPaper-root {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .MuiDrawer-root.mainbar-drawer {
+        .MuiPaper-root {
+            width: 55%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .MuiDrawer-root.mainbar-drawer {
+        .MuiPaper-root {
+            width: 100%;
+        }
+    }
+}
+
+// Common styles for SidebarDrawer
+.sidebar-drawer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 100%;
+    transition: transform 1s ease;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        display: flex;
+        align-items: center;
+        padding: .5em 1em;
+
+        .header__title {
+            flex: 1;
+            margin-left: 1em;
+            font-size: 18px;
+        }
+    }
+
+    .scrollable-content {
+        flex-grow: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.open {
+        transform: translateX(-100%);
+    }
+}
+
+// dark themed variant for custom drawer
+.sidebar-drawer.theme-dark {
+    background-color: #212121;
+
+    .header__title {
+        color: white;
+    }
+}

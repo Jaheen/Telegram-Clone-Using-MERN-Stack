@@ -1,0 +1,62 @@
+#new-channel-drawer {
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #f4f4f4;
+
+    .channel-info-container {
+        flex-grow: 1;
+        min-width: 100%;
+        position: relative;
+        overflow-y: hidden;
+
+        .header {
+            background-color: white;
+        }
+
+        .channel-info-inputs {
+            background-color: white;
+            padding: 1.5em;
+
+            .channel-info-input {
+                margin: .75em 0;
+
+                &.channel-name-input {
+                    margin-top: 2em;
+                }
+
+                &.channel-description-input {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .excerpt {
+            display: block;
+            font-size: 14px;
+            color: grey;
+            text-align: center;
+            padding-top: 1em;
+            padding-bottom: 2em;
+        }
+    }
+
+    .pick-contacts-container {
+        flex-grow: 1;
+        min-width: 100%;
+    }
+}
+
+// dark themed variant
+#new-channel-drawer.theme-dark {
+    background-color: #181818;
+
+    .channel-info-container {
+        .header {
+            background-color: #212121;
+        }
+
+        .channel-info-inputs {
+            background-color: #212121;
+        }
+    }
+}

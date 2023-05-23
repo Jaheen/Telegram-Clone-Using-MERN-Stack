@@ -1,0 +1,59 @@
+// by default this will be disabled and unchecked
+.message-item-selector {
+    align-self: flex-end;
+    .selector__radio {
+        width: 0px;
+        height: 0px;
+        position: relative;
+        border-radius: 1000px;
+        cursor: pointer;
+
+        .selector__radio-fill {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #61c642;
+            border-radius: inherit;
+            transition: height .25s ease, width .25s ease;
+
+            .MuiSvgIcon-root {
+                width: inherit;
+                height: inherit;
+                color: white;
+            }
+        }
+    }
+}
+
+// enabled mode
+.message-item-selector.enabled {
+    margin-right: 8px;
+
+    .selector__radio {
+        width: 24px;
+        height: 24px;
+        border: white solid 2px;
+    }
+}
+
+// enabled and checked
+.message-item-selector.enabled.checked {
+    .selector__radio {
+        .selector__radio-fill {
+            width: 90%;
+            height: 90%;
+        }
+    }
+}
+
+// dark themed variant
+.message-item-selector.theme-dark {
+    .selector__radio {
+        .selector__radio-fill {
+            background-color: var(--primary-color-dark);
+        }
+    }
+}

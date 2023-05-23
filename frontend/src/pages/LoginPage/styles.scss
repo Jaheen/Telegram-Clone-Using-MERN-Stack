@@ -1,0 +1,115 @@
+#login-page {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+        width: 30vw;
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+
+        .login-form__step {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2em 0;
+
+            .form__logo {
+                width: 40%;
+                margin: 2em auto;
+            }
+
+            .step__title {
+                max-width: 80%;
+                margin-top: 1em;
+                text-align: center;
+
+                .MuiSvgIcon-root {
+                    color: grey;
+                    margin-left: .5em;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            .step__description {
+                max-width: 75%;
+                font-weight: normal;
+                text-align: center;
+                color: grey;
+                margin: 1em 0;
+            }
+
+            .MuiTextField-root,
+            .MuiButton-root {
+                width: 80%;
+                margin-top: 2em;
+            }
+
+            .MuiButton-root {
+                height: 50px;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: none;
+
+                .MuiCircularProgress-root {
+                    margin-left: 1em;
+                    height: 30px !important;
+                    width: 30px !important;
+                }
+            }
+
+            .MuiButton-root.Mui-disabled {
+                background-color: #1976d285;
+                color: white;
+            }
+        }
+    }
+
+    #recaptcha-container {
+        position: absolute !important;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #login-page {
+        .login-form {
+            width: 50vw;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #login-page {
+        .login-form {
+            width: 60vw;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #login-page {
+        .login-form {
+            width: 100vw;
+
+            .login-form__step {
+                .step-title {
+                    font-size: 24px;
+                }
+
+                .step__description {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

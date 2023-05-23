@@ -1,0 +1,11 @@
+#archived-chats-drawer {
+    display: flex;
+    flex-direction: column;
+
+    .archived-chats-list {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+}

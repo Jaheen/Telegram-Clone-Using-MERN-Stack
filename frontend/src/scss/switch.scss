@@ -1,0 +1,42 @@
+.MuiSwitch-root {
+    .MuiSwitch-switchBase {
+        .MuiSwitch-thumb {
+            border: #c4c9cc solid 2.5px;
+        }
+
+        &+.MuiSwitch-track {
+            background-color: #c4c9cc;
+            opacity: 1;
+        }
+    }
+
+    .MuiSwitch-switchBase:hover {
+        background-color: transparent !important;
+    }
+
+    &.theme-light {
+        .Mui-checked {
+            .MuiSwitch-thumb {
+                color: white !important;
+                border: #3390ec 2.5px solid !important;
+            }
+
+            &+.MuiSwitch-track {
+                background-color: #3390ec !important;
+            }
+        }
+    }
+
+    &.theme-dark {
+        .Mui-checked {
+            .MuiSwitch-thumb {
+                color: #212121 !important;
+                border: #8774e1 2.5px solid !important;
+            }
+
+            &+.MuiSwitch-track {
+                background-color: #8774e1 !important;
+            }
+        }
+    }
+}

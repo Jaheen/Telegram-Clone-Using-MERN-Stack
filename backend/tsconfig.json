@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "outDir": "./build/",
+        "baseUrl": "./src"
+    }
+}

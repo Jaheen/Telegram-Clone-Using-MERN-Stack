@@ -1,0 +1,80 @@
+.text-message {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px 0;
+    height: fit-content;
+    max-width: 90%;
+    overflow: hidden;
+    margin: 1px 0;
+
+    .header {
+        display: flex;
+    }
+
+    .message-content {
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        word-break: break-all;
+
+        .meta-container {
+            align-self: stretch;
+            display: flex;
+            margin: 0 0 0 3px;
+            word-break: keep-all;
+            min-width: 40px;
+            color: gray;
+
+            .timestamp {
+                font-size: 12px;
+                margin-top: auto;
+            }
+
+            .message-status {
+                margin-top: auto;
+                display: none;
+
+                .MuiSvgIcon-root {
+                    font-size: 15px;
+                    display: inherit;
+                }
+            }
+        }
+    }
+}
+
+// variant for sent message
+.text-message.sent {
+    margin-left: auto;
+    background-color: #eeffde;
+
+    .message-content {
+        .meta-container {
+            color: #4fae4e;
+
+            .message-status {
+                display: block;
+            }
+        }
+    }
+}
+
+// dark themed variant
+.text-message.theme-dark {
+    background-color: #212121;
+
+    .message-content {
+        color: white;
+    }
+}
+
+// variant for sent message in dark theme
+.text-message.theme-dark.sent {
+    background-color: var(--primary-color-dark);
+
+    .message-content {
+        .meta-container {
+            color: white;
+        }
+    }
+}

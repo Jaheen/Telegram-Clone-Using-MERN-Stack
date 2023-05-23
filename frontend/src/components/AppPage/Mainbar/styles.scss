@@ -1,0 +1,17 @@
+#mainbar-skeleton-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: white;
+    border-left: lightgray 1px solid;
+
+    .details-skeleton {
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+}
+
+#mainbar-skeleton-header.theme-dark {
+    background-color: #212121;
+    border-color: #181818;
+}

@@ -1,0 +1,15 @@
+.MuiPopover-root {
+    .MuiPaper-root {
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+        background-color: #fffffff7;
+    }
+
+    &.theme-dark {
+        .MuiPaper-root {
+            background-color: #181818f7;
+            color: #aaaaaa;
+        }
+    }
+}

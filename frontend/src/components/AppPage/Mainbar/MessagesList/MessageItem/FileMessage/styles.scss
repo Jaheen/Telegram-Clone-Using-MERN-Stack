@@ -1,0 +1,41 @@
+.file-message {
+    min-width: 50%;
+    max-width: 90%;
+    background-color: #fff;
+    padding: .5em .25em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 2px 0;
+
+    .container {
+        .icon-container {
+            .icon {
+                font-size: 60px;
+                color: var(--primary-color-light);
+            }
+        }
+
+        .file-details {
+            .file-name {
+                font-weight: bold;
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .file-size {
+                font-size: small;
+                color: gray;
+            }
+        }
+    }
+}
+
+.file-message.sent {
+    margin-left: auto;
+}
+
+@media (max-width: 900px) {
+    .file-message {
+        min-width: 90%;
+    }
+}

@@ -1,0 +1,24 @@
+#create-contact-dialog {
+    .MuiPaper-root {
+
+        .content {
+            padding: 1em 0;
+
+            .avatar-placeholder {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(#72d5fd, #2a9ef1);
+                border-radius: 1000px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 32px;
+                color: white;
+            }
+
+            .dialog-input-field {
+                margin: .5em 0;
+            }
+        }
+    }
+}

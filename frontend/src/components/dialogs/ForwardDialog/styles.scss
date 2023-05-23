@@ -1,0 +1,20 @@
+.forward-messages-modal {
+    .MuiPaper-root {
+        width: 420px;
+
+        .header {
+            input.searchbox {
+                padding: .5em;
+                outline: none;
+                border: none;
+                font-size: 20px;
+            }
+        }
+
+        .profiles-list {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .main-container {
+        width: 100%;
+
+        .profile__meta {
+            color: grey;
+        }
+    }
+}
+
+// banner variant
+.profile.banner {
+    flex-direction: column;
+    margin: 32px 0;
+
+    .profile__avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 35px;
+    }
+
+    .main-container {
+        .profile__name {
+            font-size: larger;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .profile__meta {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+}
+
+// list item variant
+.profile.list-item {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    .profile__avatar {
+        margin-right: 8px;
+    }
+
+    .main-container {
+        .profile__meta {
+            font-size: 12px;
+        }
+    }
+}
+
+// dark themed variant
+.profile.theme-dark {
+    background-color: #212121;
+
+    .profile__name {
+        color: white;
+    }
+}

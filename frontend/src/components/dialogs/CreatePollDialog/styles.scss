@@ -1,0 +1,68 @@
+#create-poll-dialog {
+    .MuiPaper-root {
+        max-height: 90%;
+
+        .form-section {
+            padding: 1em 0;
+
+            .section__title {
+                color: gray;
+                margin: 5px 0;
+            }
+        }
+
+        .scrollable-section {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .header {
+            flex-wrap: wrap;
+            padding-top: 0;
+
+            .header__title {
+                margin-left: 8px;
+            }
+
+            .question-field {
+                margin-top: 1em;
+            }
+        }
+
+        .options {
+            .option {
+                padding: 10px 0;
+                margin-right: 10px;
+            }
+        }
+
+        .settings {
+            padding-bottom: 0;
+
+            .setting {
+                margin-top: .5em;
+
+                .setting__title {
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+
+#create-poll-dialog.theme-dark {
+    .MuiPaper-root {
+
+        .form-section {
+            .section__title {
+                color: white;
+            }
+        }
+
+        .settings {
+            .setting {
+                color: white;
+            }
+        }
+    }
+}

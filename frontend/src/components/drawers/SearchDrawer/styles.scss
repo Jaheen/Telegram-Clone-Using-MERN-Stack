@@ -1,0 +1,20 @@
+#search-drawer {
+    display: flex;
+    flex-direction: column;
+
+    .search-lists {
+        flex-grow: 1;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        display: flex;
+
+        .search-list {
+            min-width: 100%;
+            min-height: 100%;
+
+            .search-list__section {
+                padding: .5em;
+            }
+        }
+    }
+}

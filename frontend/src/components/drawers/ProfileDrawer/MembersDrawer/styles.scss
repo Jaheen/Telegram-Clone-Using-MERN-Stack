@@ -1,0 +1,55 @@
+#group-members-drawer {
+    .MuiPaper-root {
+        .header {
+            flex-wrap: wrap;
+
+            .members-searchbar {
+                width: 100%;
+
+                .members-searchbox {
+                    border: none;
+                    padding: 1em;
+                    background-color: transparent;
+                    outline: none;
+                    font-size: 14px;
+                    width: inherit;
+                }
+            }
+        }
+
+        .members-list {
+            padding: 0 .5em;
+
+            .profile-item-container {
+                border-radius: 10px;
+            }
+        }
+
+        #add-members-fab {
+            bottom: 3%;
+        }
+    }
+}
+
+// dark themed variant
+#group-members-drawer.theme-dark {
+    .MuiPaper-root {
+        .header {
+            .members-searchbar {
+                .members-searchbox {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (hover:hover) {
+    #group-members-drawer .members-list .profile-item-container:hover {
+        background-color: var(--light-hover);
+    }
+
+    #group-members-drawer.theme-dark .members-list .profile-item-container:hover {
+        background-color: var(--dark-hover);
+    }
+}

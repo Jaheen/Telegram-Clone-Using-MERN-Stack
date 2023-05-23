@@ -1,0 +1,70 @@
+.MuiTextField-root {
+    label {
+        color: gray;
+
+        &.Mui-focused {
+            color: var(--primary-color-light);
+        }
+    }
+
+    input {
+        color: black;
+    }
+
+    .MuiInputBase-root {
+        border-radius: 10px;
+
+        .MuiOutlinedInput-notchedOutline {
+            color: grey;
+            border-color: lightgray;
+        }
+
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: var(--primary-color-light);
+        }
+
+        &:hover .MuiOutlinedInput-notchedOutline {
+            border-color: var(--primary-color-light);
+        }
+    }
+
+    &:hover label {
+        color: var(--primary-color-light);
+    }
+}
+
+.MuiTextField-root.form-field {
+    width: 90%;
+    margin: 1em auto;
+}
+
+// dark themed variant
+.MuiTextField-root.theme-dark {
+    label {
+        &.Mui-focused {
+            color: var(--primary-color-dark);
+        }
+    }
+
+    input {
+        color: white;
+    }
+
+    .MuiInputBase-root {
+        .MuiOutlinedInput-notchedOutline {
+            border-color: gray;
+        }
+
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: var(--primary-color-dark);
+        }
+
+        &:hover .MuiOutlinedInput-notchedOutline {
+            border-color: var(--primary-color-dark);
+        }
+    }
+
+    &:hover label {
+        color: var(--primary-color-dark);
+    }
+}

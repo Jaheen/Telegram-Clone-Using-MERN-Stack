@@ -1,0 +1,25 @@
+// Styles for root component
+.message-item {
+    background-color: transparent;
+
+    .message-container {
+        width: 70%;
+        min-height: 28px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+// dark themed variant of message-item
+.message-item.theme-dark {}
+
+// for mobiles in potrait mode
+@media (max-width: 576px) {
+    .message-item {
+        .message-container {
+            width: 95%;
+        }
+    }
+}

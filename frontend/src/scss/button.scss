@@ -1,0 +1,59 @@
+.MuiButton-root {
+    border-radius: 8px !important;
+
+    &.MuiButton-text {
+        color: var(--primary-color-light);
+    }
+
+    &.MuiButton-text.btn-danger {
+        color: var(--danger-color-light) !important;
+    }
+
+    &.MuiButton-contained {
+        color: white;
+        background-color: var(--primary-color-light) !important;
+    }
+
+    &.MuiButton-contained.btn-danger {
+        background-color: var(--danger-color-light) !important;
+    }
+
+    &.Mui-disabled {
+        background-color: rgba(0, 0, 0, 0.12) !important;
+    }
+}
+
+@media (hover:hover) {
+    .MuiButton-text.btn-danger:hover {
+        background-color: var(--danger-hover-color-light) !important;
+    }
+}
+
+.MuiButton-root.theme-dark {
+    &.MuiButton-text {
+        color: var(--primary-color-dark);
+    }
+
+    &.MuiButton-text.btn-danger {
+        color: var(--danger-color-dark) !important;
+    }
+
+    &.MuiButton-contained {
+        background-color: var(--primary-color-dark) !important;
+    }
+
+    &.MuiButton-contained.btn-danger {
+        background-color: var(--danger-color-dark) !important;
+    }
+
+    &.Mui-disabled {
+        background-color: rgb(50, 50, 50) !important;
+        color: white;
+    }
+}
+
+@media (hover:hover) {
+    .MuiButton-text.btn-danger.theme-dark:hover {
+        background-color: var(--danger-hover-color-dark) !important;
+    }
+}

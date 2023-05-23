@@ -1,0 +1,31 @@
+#edit-profile-drawer {
+    .form-field {
+        width: 90%;
+        margin: 1em auto;
+    }
+
+    .form-field-title {
+        padding: 1em 1.5em;
+        padding-bottom: .5em;
+        color: var(--primary-color-light);
+    }
+
+    .excerpt {
+        background-color: #f4f4f4;
+        padding: 1em 1.5em;
+        color: grey;
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+// Dark themed variant
+#edit-profile-drawer.theme-dark {
+    .form-field-title {
+        color: var(--primary-color-dark);
+    }
+
+    .excerpt {
+        background-color: #181818;
+    }
+}

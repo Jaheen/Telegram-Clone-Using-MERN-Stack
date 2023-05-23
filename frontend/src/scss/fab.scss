@@ -1,0 +1,18 @@
+.fab-bottom-right {
+    position: absolute !important;
+    bottom: -100%;
+    right: 5%;
+    transition: bottom .5s ease !important;
+    background-color: var(--primary-color-light) !important;
+    color: white !important;
+    z-index: inherit !important;
+    box-shadow: none;
+}
+
+.fab-bottom-right.theme-dark {
+    background-color: var(--primary-color-dark) !important;
+}
+
+.fab-bottom-right.slide-up {
+    bottom: 3%;
+}

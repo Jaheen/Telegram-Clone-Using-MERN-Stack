@@ -1,0 +1,62 @@
+#action-bar {
+    padding: .25em .5em .75em .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .action-box-container {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+
+        .action-box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 0 1em;
+
+            .message-box {
+                outline: none;
+                border: none;
+                padding: 1em;
+                flex: 1;
+                font-size: 16px;
+                background-color: transparent;
+            }
+
+            #attach-button {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+// dark themed action bar
+#action-bar.theme-dark {
+    .action-box-container {
+        .action-box {
+            background-color: #212121;
+
+            .message-box {
+                color: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #action-bar {
+        .action-box-container {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #action-bar {
+        .action-box-container {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+#mainbar-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: white;
+    border-left: lightgray 1px solid;
+    cursor: pointer;
+
+    .mainbar-header__back-button {
+        display: none;
+
+        @media (max-width: 576px) {
+            display: block;
+        }
+    }
+
+    .header__chat-avatar {
+        margin-left: 10px;
+    }
+
+    .header__chat-details {
+        flex-grow: 1;
+        overflow: hidden;
+        padding: 0 10px;
+
+        &>p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .chat__name {
+            font-weight: bold;
+        }
+
+        .chat__meta {
+            font-size: 13px;
+            color: grey;
+        }
+    }
+
+    #group-join-button,
+    #channel-subscribe-button {
+        background-color: var(--primary-color-light);
+        min-width: 100px;
+        color: white;
+    }
+
+    .header__chat-actions {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// Header with dark theme
+#mainbar-header.theme-dark {
+    background-color: #212121;
+    border-color: #181818;
+
+    .header__chat-details {
+        .chat__name {
+            color: white;
+        }
+    }
+
+    #group-join-button,
+    #channel-subscribe-button {
+        background-color: var(--primary-color-dark);
+    }
+}

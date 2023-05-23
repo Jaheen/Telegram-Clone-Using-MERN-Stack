@@ -1,0 +1,175 @@
+.pick-contacts {
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: hidden;
+
+    .header {
+        background-color: white;
+    }
+
+    .selected-list {
+        max-height: 20%;
+        padding: 0 1em;
+        background-color: white;
+        overflow: hidden auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        .selected-item {
+            margin: 3px 5px;
+            overflow: hidden;
+
+            .MuiChip-root {
+                background-color: rgba(113, 118, 122, 0.08);
+                position: relative;
+                cursor: pointer;
+
+                .MuiAvatar-root {
+                    margin: 0;
+                    height: 32px;
+                    width: 32px;
+                    color: white;
+                }
+
+                .MuiChip-deleteIcon {
+                    position: absolute;
+                    background-color: #fff;
+                    border-radius: 1000px;
+                    color: white;
+                    height: 32px;
+                    width: 32px;
+                    left: 6px;
+                    opacity: 0;
+                    transition: rotate .25s ease;
+                    background-color: var(--danger-color-light);
+                }
+            }
+        }
+    }
+
+    .search-bar {
+        width: 100%;
+        background-color: white;
+        padding: .25em 1em;
+        box-shadow: 0px 2px 3px -3px rgba(0, 0, 0, 0.5);
+
+        .search-bar__search-box {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: .5em .75em;
+            margin: 5px 0;
+            font-size: 1em;
+        }
+    }
+
+    .selection-list {
+        flex-grow: 1;
+        margin-top: 10px;
+        padding-top: 5px;
+        background-color: white;
+        overflow-y: auto;
+
+        .selection-item {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            margin: 0 5px;
+
+            &:hover {
+                background-color: var(--light-hover);
+            }
+
+            .MuiCheckbox-root {
+                color: grey;
+            }
+
+            .MuiCheckbox-root.Mui-checked {
+                color: var(--primary-color-light);
+            }
+
+            // disable hover of contact item
+            .contact-item {
+                &:hover {
+                    background-color: unset;
+                }
+            }
+        }
+    }
+}
+
+// Dark themed Variant of pick contacts
+.pick-contacts.theme-dark {
+    background-color: #181818;
+
+    .header {
+        background-color: #212121;
+    }
+
+    .selected-list {
+        background-color: #212121;
+
+        .selected-item {
+            .MuiChip-root {
+                color: white;
+
+                .MuiChip-deleteIcon {
+                    background-color: var(--danger-color-dark);
+                }
+            }
+        }
+    }
+
+    .search-bar {
+        background-color: #212121;
+
+        .search-bar__search-box {
+            color: white;
+        }
+    }
+
+    .selection-list {
+        background-color: #212121;
+
+        .selection-item {
+            .MuiCheckbox-root.Mui-checked {
+                color: var(--primary-color-dark);
+            }
+
+            &:hover {
+                background-color: var(--dark-hover);
+            }
+        }
+    }
+}
+
+@media (hover:hover) {
+    .pick-contacts {
+        .selected-list {
+            .selected-item {
+                .MuiChip-root:hover {
+                    background-color: var(--danger-hover-color-light);
+
+                    .MuiChip-deleteIcon {
+                        opacity: 1;
+                        rotate: 45deg;
+                    }
+                }
+            }
+        }
+    }
+
+    .pick-contacts.theme-dark {
+        .selected-list {
+            .selected-item {
+                .MuiChip-root:hover {
+                    background-color: var(--danger-hover-color-dark);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.MuiMenuItem-root {
+    align-items: center;
+    height: 2rem;
+
+    &:hover {
+        background-color: var(--light-hover);
+    }
+
+    svg.MuiSvgIcon-root {
+        margin-right: 1rem;
+    }
+
+    .menu-item__text {
+        flex-grow: 1;
+        font-size: 14px;
+    }
+
+    &.theme-dark {
+        color: white;
+
+        &:hover {
+            background-color: var(--dark-hover);
+        }
+    }
+
+    // for warning menu items like logout, delete, leave channel etc
+    &.item-red {
+        color: #df3f40;
+
+        &:hover {
+            background-color: rgba(223, 63, 64, 0.08);
+        }
+    }
+}

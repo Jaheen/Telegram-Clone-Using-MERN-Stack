@@ -1,0 +1,75 @@
+#message-selection-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .selection-count {
+        font-size: 14px;
+        padding: 0 .5em;
+        margin-right: auto;
+    }
+
+    .MuiButton-root {
+        text-transform: none;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin: 0 3px;
+    }
+
+    #forward-button {
+        color: unset;
+
+        .MuiSvgIcon-root {
+            transform: rotateY(180deg);
+        }
+
+        &:hover {
+            background-color: #71767a14;
+        }
+    }
+
+    #delete-button {
+        color: #df3f40;
+
+        &:hover {
+            background-color: #df3f4014;
+        }
+    }
+
+    &.active {
+        transform: translateY(-100%);
+    }
+}
+
+#message-selection-overlay.theme-dark {
+    background-color: #212121;
+
+    .selection-count {
+        color: white;
+    }
+
+    #forward-button {
+        color: white;
+
+        &:hover {
+            background-color: #71767a2a;
+        }
+    }
+
+    #delete-button {
+        color: #ff595a;
+
+        &:hover {
+            background-color: #df3f3f2e;
+        }
+
+    }
+}
